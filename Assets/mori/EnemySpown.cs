@@ -14,6 +14,8 @@ public class EnemySpown : MonoBehaviour
     [SerializeField] int RightRangex = 6;
     [SerializeField] int LeftRangez = -6;
     [SerializeField] int RightRangez = 6;
+    [SerializeField] int maxEnemies = 10; // “G‚ÌÅ‘å”
+    private int currentEnemyCount = 0; // Œ»İ‚Ì“G‚Ì”
     // Start is called before the first frame update
     void Start()
     {
@@ -25,17 +27,22 @@ public class EnemySpown : MonoBehaviour
     {
         Transform myTransform = this.transform;
         Vector3 worldPos = myTransform.position;
-
         if (Vector3.Distance(transform.position, playerTr.position) < 3f)
+            return;
+        // “G‚ÌÅ‘å”‚É’B‚µ‚Ä‚¢‚éê‡A“G‚ğ¶¬‚µ‚È‚¢
+        if (currentEnemyCount >= maxEnemies)
             return;
         x = Random.Range(LeftRangex, RightRangex);
         z = Random.Range(LeftRangez, RightRangez);
-
-        
-        num++;
+            num++;
         if (num % 300 == 0)
         {
-            Instantiate(Enemy, new Vector3(worldPos.x+x, 1, worldPos.z+z), Quaternion.identity);
+            Instantiate(Enemy, new Vector3(worldPos.x + x, 1, worldPos.z + z), Quaternion.identity);
+            currentEnemyCount++; // “G‚ğ¶¬‚·‚é‚½‚Ñ‚ÉƒJƒEƒ“ƒg‚ğ‘‚â‚·
         }
+    }
+    public void DecrementEnemyCount()
+    {
+        currentEnemyCount--;
     }
 }

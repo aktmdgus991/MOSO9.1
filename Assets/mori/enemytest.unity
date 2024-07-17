@@ -229,7 +229,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &275318421
+--- !u!1 &223075348
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -237,22 +237,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 275318423}
-  - component: {fileID: 275318422}
+  - component: {fileID: 223075350}
+  - component: {fileID: 223075349}
   m_Layer: 0
-  m_Name: ES3
+  m_Name: ES2
   m_TagString: EnemySpown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &275318422
+--- !u!114 &223075349
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275318421}
+  m_GameObject: {fileID: 223075348}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cda18e309f0b87f4f9acb43703691f6f, type: 3}
@@ -263,16 +263,17 @@ MonoBehaviour:
   RightRangex: 6
   LeftRangez: -6
   RightRangez: 6
---- !u!4 &275318423
+  maxEnemies: 10
+--- !u!4 &223075350
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275318421}
+  m_GameObject: {fileID: 223075348}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: -10}
+  m_LocalPosition: {x: 12, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -429,7 +430,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686491857}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1116195240
+--- !u!1 &931949075
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -437,22 +438,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1116195242}
-  - component: {fileID: 1116195241}
+  - component: {fileID: 931949077}
+  - component: {fileID: 931949076}
   m_Layer: 0
-  m_Name: ES2
+  m_Name: ES3
   m_TagString: EnemySpown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1116195241
+--- !u!114 &931949076
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1116195240}
+  m_GameObject: {fileID: 931949075}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cda18e309f0b87f4f9acb43703691f6f, type: 3}
@@ -463,16 +464,17 @@ MonoBehaviour:
   RightRangex: 6
   LeftRangez: -6
   RightRangez: 6
---- !u!4 &1116195242
+  maxEnemies: 10
+--- !u!4 &931949077
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1116195240}
+  m_GameObject: {fileID: 931949075}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 10}
+  m_LocalPosition: {x: 12, y: 0, z: 12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -791,6 +793,7 @@ MonoBehaviour:
   RightRangex: 6
   LeftRangez: -6
   RightRangez: 6
+  maxEnemies: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -800,5 +803,5 @@ SceneRoots:
   - {fileID: 686491858}
   - {fileID: 1403189458}
   - {fileID: 2090986354}
-  - {fileID: 1116195242}
-  - {fileID: 275318423}
+  - {fileID: 223075350}
+  - {fileID: 931949077}
